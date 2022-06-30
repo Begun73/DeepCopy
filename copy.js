@@ -28,7 +28,7 @@ const deepCopy = (original) => {
     !Object.keys(value).length && value.constructor && !isPrototype;
 
   const insideCopy = (value, { context, isPrototype }) => {
-    if (isPrimitive()) {
+    if (isPrimitive(value)) {
       return value;
     }
 
